@@ -1,1 +1,85 @@
 @import "tailwindcss";
+
+@theme {
+    /*Colors*/
+    --color-primary: #ffaf21;
+    --color-primary-100: #ddb966;
+    --color-secondary: #252735;
+    --color-secondary-100: #343546;
+    --color-white: #e8e7e4;
+    --color-grey: #656b78;
+    --color-grey-subtitle: #646878;
+
+    /*Fonts*/
+    --font-primary:
+        "Mona Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+
+    /*font sizes*/
+    --text-h1: 3rem; /*48px*/
+    --text-h2: 2rem; /*32px*/
+    --text-h3: 1.5rm; /*24px*/
+    --text-h4: 1rem; /*16px*/
+    --text-h5: 0.875rem; /*14px*/
+    --text-h6: 0.75rem; /*12px*/
+    --text-subtitle-1: 1.125rem; /*18px*/
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 200;
+    src: url("/font/Monosans/Mona-Sans-UltraLight.woff2") format("wff2");
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("/font/Monosans/Mona-Sans-Light.woff2") format("wff2");
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/Monosans/Mona-Sans-Regular.woff2") format("wff2");
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/font/Monosans/Mona-Sans-Medium.woff2") format("wff2");
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/font/Monosans/Mona-Sans-Semibold.woff2") format("wff2");
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/font/Monosans/Mona-Sans-Bold.woff2") format("wff2");
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/font/Monosans/Mona-Sans-ExtraBold.woff2") format("wff2");
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 900;
+    src: url("/font/Monosans/Mona-Sans-Black.woff2") format("wff2");
+}
+
+body {
+    font-family: "Mona Sans", san-serif;
+}

@@ -1,0 +1,17 @@
+---
+import { cn } from "@utils/index";
+
+interface Props {
+    sectionName?: string;
+    class?: string;
+    classInner?: string;
+}
+
+const { class: className, classInner, sectionName }: Props = Astro.props;
+---
+
+<div id={sectionName} class:list={cn("relative", className)}>
+    <div class:list={cn("mx-auto max-w-[1210] px-4", classInner)}>
+        <slot />
+    </div>
+</div>
