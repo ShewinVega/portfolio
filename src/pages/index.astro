@@ -1,12 +1,38 @@
 ---
-import Welcome from "../components/Welcome.astro";
-import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
+import { Image } from "astro:assets";
+import { MainLayout, SectionLayout } from "../layouts";
+
+import defaultUser from "@assets/default-User.jpg";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-    <Welcome />
-</Layout>
+<MainLayout title="home">
+    <SectionLayout
+        class="bg-secondary-100 pt-10"
+        classInner="flex flex-col items-center max-h-[668px]"
+    >
+        <div class="flex items-center justify-center gap-4">
+            <div class="pb-4 flex flex-col items-center">
+                <Image
+                    src={defaultUser}
+                    alt="Profile Image"
+                    loading="lazy"
+                    quality="max"
+                    class="w-[150px] h-[150px] rounded-[50%]"
+                />
+                <span class="text-white text-h5 font-medium"
+                    >Full Stack developer</span
+                >
+            </div>
+
+            <div class="mb-6 w-[180px]">
+                <span class="text-white text-h1 font-bold leading-10"
+                    >Edwin Narváez</span
+                >
+                <div class="w-[50px] h-[8px] bg-primary-100 rounded"></div>
+            </div>
+        </div>
+    </SectionLayout>
+</MainLayout>
