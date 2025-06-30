@@ -3,6 +3,7 @@ import petspointImage from "@assets/petspoint.webp";
 import journalAppImage from "@assets/journalApp.webp";
 import hopeImage from "@assets/hope.webp";
 import heroesAppImage from "@assets/heroesApp.webp";
+import moviesAppImage from "@assets/moviesApp.jpg";
 
 import githubImage from "@assets/github.svg";
 import reactImage from "@assets/react.svg";
@@ -15,6 +16,7 @@ import nodeImage from "@assets/nodejs.svg";
 import sequelizeImage from "@assets/sequelize.svg";
 import postgresImage from "@assets/postgresql.svg";
 import azureImage from "@assets/azure.svg";
+import tailwindImage from "@assets/tailwindcss.svg";
 
 export const projectList = [
   {
@@ -88,13 +90,29 @@ export const projectList = [
     completed: true,
   },
   {
-    name: "HeroesApp",
+    name: "MoviesApp",
+    profileImage: moviesAppImage,
+    description:
+      "MoviesApp es una aplicación móvil desarrollada con React Native que permite a los usuarios explorar películas utilizando la API de TMDB.",
+    webPage: {
+      url: "",
+      name: "MoviesApp",
+    },
+    repository: {
+      url: "https://github.com/ShewinVega/TMDBMovie-ReactNative/tree/develop",
+      icon: githubImage,
+    },
+    technologies: [typescriptImage, reactImage, tailwindImage],
+    completed: true,
+  },
+  {
+    name: "HeroesWeb",
     profileImage: heroesAppImage,
     description:
       "Desarrollo de un buscador y lista de Heroes, su principal objetivo es mostrar el manejo de context en React de manera simple para los nuevos devs.",
     webPage: {
       url: "",
-      name: "HeroesApp",
+      name: "HeroesWeb",
     },
     repository: {
       url: "https://github.com/ShewinVega/HeroesApp",
