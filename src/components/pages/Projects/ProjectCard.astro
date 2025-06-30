@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import type { WebPageInterface, RepositoryInterface } from "./interfaces";
+
+export interface Props {
+    profileImage: ImageMetadata;
+    name: string;
+    description: string;
+    webPage: WebPageInterface;
+    repository: RepositoryInterface;
+    technologies: string[];
+    completed: boolean;
+    statusIcon: string;
+}
+
+const {
+    profileImage,
+    name,
+    description,
+    repository,
+    webPage,
+    technologies,
+    completed,
+    statusIcon,
+}: Props = Astro.props;
+---
+
+<article
+    class="border-2 border-white/10 rounded-lg p-6 flex flex-col gap-y-2 justify-center lg:max-w-[380px]"
+>
+    <div class="h-[250px] rounded-lg">
+        <Image
+            src={profileImage}
+            alt="Provitional image"
+            class="w-full h-full object-cover rounded-lg"
+        />
+    </div>
+    <!-- title -->
+    <div class="flex justify-between items-center">
+        <span class="text-white text-h3 font-semibold">{name}</span>
+        <div class="flex gap-x-1">
+            <Icon name="calendar-code" size={24} color="white" />
+            <span class="text-white">Sep, 2024</span>
+        </div>
+    </div>
+    <!-- Status and redirections -->
+    <div class="flex gap-x-3 items-center">
+        <div class="flex gap-x-1 items-center">
+            <Icon
+                name={statusIcon}
+                size={12}
+                color={completed ? "green" : "primary"}
+            />
+            <span class="text-white text-h6 opacity-60">
+                {completed ? "Completado" : "En curso"}
+            </span>
+        </div>
+        <div class="flex gap-x-1 items-center">
+            <Icon name="link" class="text-white" size={12} />
+            <a href={webPage.url} target="_blank">
+                <span class="text-white text-h6 opacity-60">
+                    {webPage.name}
+                </span>
+            </a>
+        </div>
+        {
+            repository.url ? (
+                <a href={repository.url} class="flex gap-x-1 items-center">
+                    <Icon name={repository.icon} size={12} />
+                    <span class="text-white text-h6 opacity-60">Source</span>
+                </a>
+            ) : (
+                <div
+                    class="flex gap-x-1 items-center cursor-pointer"
+                    data-tooltip-target="tooltip-light"
+                    data-tooltip-style="light"
+                >
+                    <Icon name="lock" size={12} color="red" />
+                    <span class="text-white text-h6 opacity-60 line-through ">
+                        Source
+                    </span>
+                </div>
+            )
+        }
+    </div>
+    <!-- Description -->
+    <p
+        set:html={description}
+        class="text-white text-h5 text-pretty leading-6 opacity-80"
+    />
+    <hr class="text-secondary-200" />
+    <div class="flex gap-6 items-center justify-start">
+        {technologies.map((iconName) => <Icon name={iconName} size={20} />)}
+    </div>
+    <hr class="text-secondary-200" />
+</article>

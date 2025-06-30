@@ -2,7 +2,7 @@
 import { cn } from "@utils/index";
 
 interface Props {
-    sectionName?: string;
+    sectionName: string;
     class?: string;
     classInner?: string;
 }
@@ -10,8 +10,8 @@ interface Props {
 const { class: className, classInner, sectionName }: Props = Astro.props;
 ---
 
-<div id={sectionName} class:list={cn("relative", className)}>
-    <div class:list={cn("mx-auto max-w-[1210] px-4", classInner)}>
+<section id={sectionName} class:list={cn("", className)}>
+    <div class:list={cn("mx-auto lg:max-w-3xl px-4", classInner)}>
         <slot />
     </div>
-</div>
+</section>

@@ -1,14 +1,18 @@
 @import "tailwindcss";
+@import "@splidejs/react-splide/css";
 
 @theme {
     /*Colors*/
     --color-primary: #ffaf21;
     --color-primary-100: #ddb966;
-    --color-secondary: #252735;
-    --color-secondary-100: #343546;
+    --color-secondary: #050505;
+    --color-secondary-100: #090909;
+    --color-secondary-200: #111111;
     --color-white: #e8e7e4;
     --color-grey: #656b78;
     --color-grey-subtitle: #646878;
+    --color-green: #266734;
+    --color-gray-800: #222a39;
 
     /*Fonts*/
     --font-primary:
@@ -17,7 +21,7 @@
     /*font sizes*/
     --text-h1: 3rem; /*48px*/
     --text-h2: 2rem; /*32px*/
-    --text-h3: 1.5rm; /*24px*/
+    --text-h3: 1.5rem; /*24px*/
     --text-h4: 1rem; /*16px*/
     --text-h5: 0.875rem; /*14px*/
     --text-h6: 0.75rem; /*12px*/
@@ -25,61 +29,78 @@
 }
 
 @font-face {
-    font-family: "Mona Sans";
+    font-family: "Poppins";
+    font-weight: 100;
+    font-style: normal;
+    src: url("/fonts/poppins/Poppins-Thin.wff2") format("wff2");
+}
+
+@font-face {
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 200;
-    src: url("/font/Monosans/Mona-Sans-UltraLight.woff2") format("wff2");
+    src: url("/fonts/poppins/Poppins-ExtraLight.woff2") format("wff2");
 }
 
 @font-face {
-    font-family: "Mona Sans";
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
-    src: url("/font/Monosans/Mona-Sans-Light.woff2") format("wff2");
+    src: url("/fonts/poppins/Poppins-Light.woff2") format("wff2");
 }
 
 @font-face {
-    font-family: "Mona Sans";
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
-    src: url("/font/Monosans/Mona-Sans-Regular.woff2") format("wff2");
+    src: url("/fonts/poppins/Poppins-Regular.woff2") format("wff2");
 }
 
 @font-face {
-    font-family: "Mona Sans";
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
-    src: url("/font/Monosans/Mona-Sans-Medium.woff2") format("wff2");
+    src: url("/fonts/poppins/Poppins-Medium.woff2") format("wff2");
 }
 
 @font-face {
-    font-family: "Mona Sans";
-    font-style: normal;
+    font-family: "Poppins";
+    src: url("/fonts/poppins/Poppins-SemiBold.woff2") format("woff2");
     font-weight: 600;
-    src: url("/font/Monosans/Mona-Sans-Semibold.woff2") format("wff2");
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Mona Sans";
-    font-style: normal;
+    font-family: "Poppins";
+    src: url("/fonts/poppins/Poppins-Bold.woff2") format("woff2");
     font-weight: 700;
-    src: url("/font/Monosans/Mona-Sans-Bold.woff2") format("wff2");
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Mona Sans";
-    font-style: normal;
+    font-family: "Poppins";
+    src: url("/fonts/poppins/Poppins-ExtraBold.woff2") format("woff2");
     font-weight: 800;
-    src: url("/font/Monosans/Mona-Sans-ExtraBold.woff2") format("wff2");
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Mona Sans";
-    font-style: normal;
+    font-family: "Poppins";
+    src: url("/fonts/poppins/Poppins-Black.woff2") format("woff2");
     font-weight: 900;
-    src: url("/font/Monosans/Mona-Sans-Black.woff2") format("wff2");
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Mona Sans", san-serif;
+    font-family: "Poppins", san-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
