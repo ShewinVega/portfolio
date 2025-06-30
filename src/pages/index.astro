@@ -1,38 +1,104 @@
 ---
 import { Image } from "astro:assets";
-import { MainLayout, SectionLayout } from "../layouts";
+import { Icon } from "astro-icon/components";
 
-import defaultUser from "@assets/default-User.jpg";
+import { MainLayout, SectionLayout } from "@layouts/index";
+import SocialPill from "@src/components/SocialPill.astro";
+import { ProjectPage } from "@src/components/pages/Projects/Projects";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import userImage from "@assets/shewin.jpeg";
+import LinkedinIcon from "@icons/Linkedin.astro";
+import MailIcon from "@icons/Mail.astro";
+import CodeIcon from "@icons/Code.astro";
+import { profile } from "@mocks/index";
 ---
 
-<MainLayout title="home">
+<MainLayout
+    title="Portfolio de Edwin Narváez - Desarrollador y programador Backend y Web con 3 años de experiencia"
+>
+    <!-- Hero -->
     <SectionLayout
-        class="bg-secondary-100 pt-10"
-        classInner="flex flex-col items-center max-h-[668px]"
+        sectionName="hero"
+        classInner="flex flex-col gap-4 py-16 mx-auto w-full"
     >
-        <div class="flex items-center justify-center gap-4">
-            <div class="pb-4 flex flex-col items-center">
-                <Image
-                    src={defaultUser}
-                    alt="Profile Image"
-                    loading="lazy"
-                    quality="max"
-                    class="w-[150px] h-[150px] rounded-[50%]"
-                />
-                <span class="text-white text-h5 font-medium"
-                    >Full Stack developer</span
-                >
-            </div>
-
-            <div class="mb-6 w-[180px]">
+        <a
+            href="https://www.linkedin.com/in/edwin-vega-9b9a07266?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3y4hOpPtQ6ivae%2F7eO2vrw%3D%3D"
+            target="_blank"
+            class="w-[100px] h-[100px]"
+        >
+            <Image
+                src={userImage}
+                alt="Profile Image"
+                loading="lazy"
+                quality="max"
+                class="h-[100px] w-full rounded-full"
+            />
+        </a>
+        <div class="flex flex-col gap-8 mt-2">
+            <div>
                 <span class="text-white text-h1 font-bold leading-10"
                     >Edwin Narváez</span
                 >
                 <div class="w-[50px] h-[8px] bg-primary-100 rounded"></div>
             </div>
+            <p
+                class="text-white text-h4 leading-6 opacity-80 text-pretty"
+                set:html={profile.presentation_es}
+            />
         </div>
+        <nav class="flex gap-x-4 mt-3">
+            <SocialPill
+                href="https://www.linkedin.com/in/edwin-vega-9b9a07266?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3y4hOpPtQ6ivae%2F7eO2vrw%3D%3D"
+            >
+                <LinkedinIcon class="size-5" />
+                <span class="text-white o text-h5 opacity-80 hidden lg:block">
+                    Linkedin</span
+                >
+            </SocialPill>
+            <SocialPill href="https://github.com/ShewinVega?tab=repositories">
+                <Icon name="github" size={20} />
+                <span class="text-white text-h5 opacity-80 hidden lg:block"
+                    >Github</span
+                >
+            </SocialPill>
+            <SocialPill href="mailto:edwinvega201196@gmail.com">
+                <MailIcon class="size-5" />
+                <span class="text-white text-h5 opacity-80 hidden lg:block"
+                    >edwinvega201196@gmail.com</span
+                >
+            </SocialPill>
+        </nav>
+    </SectionLayout>
+
+    <!-- Projects -->
+    <SectionLayout
+        sectionName="projects"
+        classInner="flex flex-col gap-4 py-16 mx-auto w-full"
+    >
+        <span
+            class="text-white text-h2 font-semibold mb-6 flex gap-x-1 items-center"
+        >
+            <CodeIcon class="size-6" />
+            Proyectos
+        </span>
+        <ProjectPage client:only="react" />
+    </SectionLayout>
+
+    <!-- About me -->
+    <SectionLayout sectionName="aboutUs" classInner="py-16">
+        <div class="flex gap-x-4 items-center mb-6">
+            <span
+                class="text-white text-h2 font-semibold flex gap-x-1 items-center"
+            >
+                <Icon name="user-check" size={24} color="white" />
+                Sobre mí
+            </span>
+            <SocialPill
+                href="https://www.linkedin.com/in/edwin-vega-9b9a07266?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3y4hOpPtQ6ivae%2F7eO2vrw%3D%3D"
+            >
+                <LinkedinIcon class="size-5" />
+            </SocialPill>
+        </div>
+        <p class="text-white font-light" set:html={profile.about_me} />
     </SectionLayout>
 </MainLayout>
