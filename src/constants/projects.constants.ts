@@ -1,22 +1,21 @@
-import dimelcoImage from "@assets/Dimelco.webp";
-import petspointImage from "@assets/petspoint.webp";
 import journalAppImage from "@assets/journalApp.webp";
-import hopeImage from "@assets/hope.webp";
-import heroesAppImage from "@assets/heroesApp.webp";
-import moviesAppImage from "@assets/moviesApp.jpg";
-
-import githubImage from "@assets/github.svg";
-import reactImage from "@assets/react.svg";
 import typescriptImage from "@assets/typescript.svg";
-import svelteImage from "@assets/svelte.svg";
-import viteImage from "@assets/vitejs.svg";
-import astroImage from "@assets/astro.svg";
 import javascriptImage from "@assets/javascript.svg";
-import nodeImage from "@assets/nodejs.svg";
+import petspointImage from "@assets/petspoint.webp";
+import heroesAppImage from "@assets/heroesApp.webp";
+import tailwindImage from "@assets/tailwindcss.svg";
+import moviesAppImage from "@assets/moviesApp.jpg";
 import sequelizeImage from "@assets/sequelize.svg";
 import postgresImage from "@assets/postgresql.svg";
+import dimelcoImage from "@assets/Dimelco.webp";
+import githubImage from "@assets/github.svg";
+import svelteImage from "@assets/svelte.svg";
+import reactImage from "@assets/react.svg";
+import viteImage from "@assets/vitejs.svg";
+import astroImage from "@assets/astro.svg";
+import nodeImage from "@assets/nodejs.svg";
 import azureImage from "@assets/azure.svg";
-import tailwindImage from "@assets/tailwindcss.svg";
+import hopeImage from "@assets/hope.webp";
 
 export const projectList = [
   {
@@ -52,22 +51,6 @@ export const projectList = [
     completed: false,
   },
   {
-    name: "JournalApp",
-    profileImage: journalAppImage,
-    description:
-      "Pagina web responsiva, en el cual puedes agregar notas, asi manejod e imagenes por notas y registro de usuarios y google login integrado",
-    webPage: {
-      url: "https://journalnoteshewin.netlify.app/",
-      name: "Journal",
-    },
-    repository: {
-      url: "https://github.com/ShewinVega/JournalApp",
-      icon: githubImage,
-    },
-    technologies: [astroImage, reactImage, typescriptImage, viteImage],
-    completed: true,
-  },
-  {
     name: "Hope",
     profileImage: hopeImage,
     description:
@@ -87,6 +70,22 @@ export const projectList = [
       postgresImage,
       azureImage,
     ],
+    completed: true,
+  },
+  {
+    name: "JournalApp",
+    profileImage: journalAppImage,
+    description:
+      "Pagina web responsiva, en el cual puedes agregar notas, asi manejod e imagenes por notas y registro de usuarios y google login integrado",
+    webPage: {
+      url: "https://journalnoteshewin.netlify.app/",
+      name: "Journal",
+    },
+    repository: {
+      url: "https://github.com/ShewinVega/JournalApp",
+      icon: githubImage,
+    },
+    technologies: [astroImage, reactImage, typescriptImage, viteImage],
     completed: true,
   },
   {

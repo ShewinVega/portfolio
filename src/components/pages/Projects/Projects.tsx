@@ -1,5 +1,6 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { projectList } from "@src/constants/projects.constants";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+
 import { ProjectCard } from "./ProjectCard";
 
 export const ProjectPage = () => {
