@@ -4,33 +4,74 @@ export const profile = {
     and delivering scalable solutions that drive business growth.
   `,
   presentation_es: `
-    Desarrolador FullStack innovador con sede en Nicaragua.  Mi objetivo es crear soluciones claras, útiles y escalables que impulsen el crecimiento empresarial.
-  `,
-  description_es: `Desarrollador frontend y full-stack con más de tres años de experiencia en proyectos freelance,
-  especializado en tecnologías modernas como React, .Net core, Node.js, Express, Svelte y GraphQL.
-  He participado en el desarrollo de sitios web completos y en la construcción de APIs robustas, además de mantener proyectos personales que impulsan mi aprendizaje continuo.
-  Me destaco por mi capacidad para comunicarme efectivamente, resolver problemas con creatividad y adaptarme rápidamente a nuevas herramientas y desafíos.
-  Estoy en búsqueda de un rol donde pueda aportar mis habilidades técnicas y, al mismo tiempo, seguir creciendo profesionalmente en un ambiente dinámico y colaborativo.`,
-  description_en: `
-  Frontend and full-stack developer with over three years of experience in freelance projects, specializing in modern technologies such as React, .Net core, Node.js, Express, Svelte, and GraphQL.
-  I have contributed to the development of complete websites and built robust APIs, alongside maintaining personal projects that drive my continuous learning.
-  I stand out for my effective communication skills, creative problem-solving, and ability to quickly adapt to new tools and challenges.
-  I am seeking a role where I can contribute my technical skills while continuing to grow professionally in a dynamic and collaborative environment.
+    Desarrolador FullStack innovador con sede en Nicaragua.  
+    Mi objetivo es crear soluciones claras, útiles y escalables que impulsen el crecimiento empresarial, 
+    enfocado en tecnologías web modernas como <span class="text-primary">React</span>, <span class="text-primary">Svelte</span>, 
+    <span class="text-primary">.Net</span>, <span class="text-primary">Nodejs</span>
+    y con más de 3 años de experiencia en distintos proyectos.
   `,
 
-  about_me: `
-    Me llamo Edwin, empecé mi carrera como desarrollador hace poco más de 3 años.
-    Desde entonces <span class="text-primary">he trabajado en distintos proyectos</span>, tanto de forma freelance como autodidacta,
-    lo que me ha <span class="text-primary">permitido fortalecer mis habilidades en entornos reales y desafiantes.</span>
 
-    <br />
-    <br />
-    Me he especializado en tecnologías modernas como React, Svelte, Astro, .Net core, Node.js, Express y GraphQL.
-    Actualmente estoy <span class="text-primary">colaborando en el desarrollo de una app orientada al aprendizaje para niños con TEA</span>,
-    la cual forma parte de un trabajo de investigación aplicado que estoy llevando a cabo, en donde ya esta en su etapa final de publicación.
-    <br />
-    <br />
-    Me destaco por mi capacidad para <span class="text-primary">comunicarme efectivamente, resolver problemas con creatividad y adaptarme rápidamente a nuevas herramientas y desafíos.</span>
-    Mi objetivo es lograr aportar mis habilidades técnicas y, al mismo tiempo, seguir creciendo profesionalmente en un ambiente dinámico y colaborativo.
-  `,
+  stack_technological: [
+    {
+      title: "React",
+      icon: "react"
+    },
+    {
+      title: "Astro",
+      icon: "astro_dark"
+    },
+    {
+      title: "Svelte",
+      icon: "svelte"
+    },
+    {
+      title: ".Net",
+      icon: "dotnet"
+    },
+    {
+      title: "NodeJS",
+      icon: "nodejs"
+    },
+    {
+      title: "Sequelize",
+      icon: "sequelize"
+    },
+    {
+      title: "Sql",
+      icon: "sql_server"
+    },
+    {
+      title: "Postgres",
+      icon: "postgresql"
+    },
+    {
+      title: "Tailwind",
+      icon: "tailwindcss"
+    },
+    {
+      title: "C#",
+      icon: "csharp"
+    },
+    {
+      title: "Javascript",
+      icon: "javascript"
+    },
+    {
+      title: "Typescript",
+      icon: "typescript"
+    }
+  ],
+
+  skill: [
+    'Comunicación efectiva',
+    'Trabajo en equipo',
+    'Adaptabilidad',
+    'Resolucion de problemas',
+    'Creatividad',
+    'Aprendizaje rapido',
+    'Proactividad',
+    'Liderazgo',
+    'Pensamiento critico',
+  ]
 };

@@ -19,5 +19,9 @@ export default defineConfig({
   },
   image: {
     service: passthroughImageService(),
+  },
+  server: {
+    host: true,
+    port: 4321,
   }
 });
