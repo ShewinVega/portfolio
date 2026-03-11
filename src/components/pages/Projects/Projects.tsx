@@ -6,7 +6,7 @@ import { ProjectCard } from "./ProjectCard";
 export const ProjectPage = () => {
   const options: any = {
     type: "loop",
-    perPage: 2,
+    perPage: 3,
     perMove: 1,
     arrows: false,
     gap: "24px",
