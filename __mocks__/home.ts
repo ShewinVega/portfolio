@@ -1,8 +1,4 @@
 export const profile = {
-  presentation_en: `
-    An Innovative full-stack developer based in Nicaragua.My goal is to create clear and useful, crafting intuitive interfaces,
-    and delivering scalable solutions that drive business growth.
-  `,
   presentation_es: `
     Desarrolador FullStack innovador con sede en Nicaragua.  
     Mi objetivo es crear soluciones claras, útiles y escalables que impulsen el crecimiento empresarial, 
