@@ -13,19 +13,28 @@
     --color-grey-subtitle: #646878;
     --color-green: #266734;
     --color-gray-800: #222a39;
+    --color-fluorescent-teal: #00acc1;
+    --color-tango: #b71c1c;
 
     /*Fonts*/
     --font-primary:
         "Mona Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
 
     /*font sizes*/
-    --text-h1: 3rem; /*48px*/
-    --text-h2: 2rem; /*32px*/
-    --text-h3: 1.5rem; /*24px*/
-    --text-h4: 1rem; /*16px*/
-    --text-h5: 0.875rem; /*14px*/
-    --text-h6: 0.75rem; /*12px*/
-    --text-subtitle-1: 1.125rem; /*18px*/
+    --text-h1: 3rem;
+    /*48px*/
+    --text-h2: 2rem;
+    /*32px*/
+    --text-h3: 1.5rem;
+    /*24px*/
+    --text-h4: 1rem;
+    /*16px*/
+    --text-h5: 0.875rem;
+    /*14px*/
+    --text-h6: 0.75rem;
+    /*12px*/
+    --text-subtitle-1: 1.125rem;
+    /*18px*/
 }
 
 @font-face {
