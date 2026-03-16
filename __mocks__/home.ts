@@ -69,5 +69,25 @@ export const profile = {
     'Proactividad',
     'Liderazgo',
     'Pensamiento critico',
-  ]
+  ],
+
+  goals: [
+    {
+      title: "Angular",
+      logo: "angular",
+      description: ` Angular es una de las tecnologías que planeo incorporar a mi stack de desarrollo en el futuro. 
+        Me interesa por su enfoque estructurado para construir aplicaciones web escalables, su arquitectura basada en componentes y su sólido ecosistema para el desarrollo de aplicaciones empresariales. 
+        Aprender Angular me permitirá ampliar mi capacidad para desarrollar interfaces complejas y colaborar en proyectos de mayor escala dentro del ecosistema moderno de desarrollo web.
+      `,
+      colorBand: "border-l-tango"
+    },
+    {
+      title: "Go",
+      logo: "go",
+      description: `Go es una de las tecnologías que planeo aprender para fortalecer mis habilidades en el desarrollo backend. 
+      Me interesa especialmente por su eficiencia, su modelo de concurrencia y su capacidad para construir servicios altamente escalables. 
+      Dominar Go me permitirá desarrollar APIs y microservicios de alto rendimiento, ampliando así mis capacidades dentro del ecosistema de desarrollo backend moderno.`,
+      colorBand: "border-l-fluorescent-teal"
+    }
+  ],
 };
