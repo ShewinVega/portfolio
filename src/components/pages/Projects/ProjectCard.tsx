@@ -7,14 +7,13 @@ import {
   FaGithub,
 } from "react-icons/fa";
 
-interface Props {
+export interface ProjectCardProps {
   profileImage: ImageMetadata;
   name: string;
   description: string;
   webPage: WebPageInterface;
   repository: RepositoryInterface;
   technologies: any[];
-  completed: boolean;
 }
 
 export const ProjectCard = ({
@@ -23,16 +22,15 @@ export const ProjectCard = ({
   description,
   repository,
   webPage,
-  technologies,
-  completed,
-}: Props) => {
+  technologies
+}: ProjectCardProps) => {
   return (
-    <article className="border-2 border-white/10 rounded-lg py-4 flex flex-col gap-y-2 justify-center lg:max-w-[380px] lg:h-full">
-      <div className="h-[250px] rounded-lg">
+    <article className=" h-full border-2 border-white/10 rounded-lg pb-4 flex flex-col gap-y-2 justify-start lg:max-w-[380px]">
+      <div className="rounded-lg h-[250px]">
         <img
           src={profileImage.src}
           alt="Provitional image"
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-full rounded-lg"
         />
       </div>
       <div className="flex justify-between items-center px-2">
@@ -69,8 +67,8 @@ export const ProjectCard = ({
       <p className="text-white text-h5 text-pretty leading-6 opacity-80 px-2">
         {description}
       </p>
-      <hr className="text-secondary-200" />
-      <div className="flex gap-6 items-center justify-start px-2">
+      <hr className="text-secondary-200 mt-auto" />
+      <div className="flex gap-6 justify-start px-2">
         {technologies.map((iconName, index) => (
           <img key={index} src={iconName.src} className="size-5" />
         ))}
