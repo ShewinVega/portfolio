@@ -228,4 +228,19 @@ export const personalProjectsList = [
     },
     technologies: [nestjsImage, mongodbImage],
   },
+  {
+    name: "Portfolio",
+    profileImage: defaultImage,
+    description:
+      "Portfolio personal, hecha con astro, react, typescript y tailwind",
+    webPage: {
+      url: "https://portfolio-shewin.netlify.app/",
+      name: "Portfolio",
+    },
+    repository: {
+      url: "https://github.com/ShewinVega/portfolio/tree/develop",
+      icon: githubImage,
+    },
+    technologies: [astroImage, reactImage, typescriptImage, tailwindImage],
+  },
 ];
