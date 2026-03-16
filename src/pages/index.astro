@@ -4,13 +4,19 @@ import { Icon } from "astro-icon/components";
 
 import { MainLayout, SectionLayout } from "@layouts/index";
 import Pill from "@src/components/Pill.astro";
-import { ProjectPage } from "@src/components/pages/Projects/Projects";
+import { KCarousel } from "@src/components/shared/carousel/carousel";
+import GoalsCard from "@src/components/GoalsCard.astro";
 
 import userImage from "@assets/shewin.jpeg";
 import LinkedinIcon from "@icons/Linkedin.astro";
 import MailIcon from "@icons/Mail.astro";
-import CodeIcon from "@icons/Code.astro";
+
 import { profile } from "@mocks/index";
+import {
+    projectExperienceList,
+    personalProjectsList,
+} from "@src/constants/projects.constants";
+import { ProjectCard } from "@src/components/pages/Projects/ProjectCard";
 ---
 
 <MainLayout
@@ -86,7 +92,7 @@ import { profile } from "@mocks/index";
         <div class="flex gap-x-10 gap-y-4 flex-wrap">
             {
                 profile.stack_technological.map((item) => (
-                    <div class="flex flex-col gap-y-2 items-center mb-2">
+                    <div class="flex flex-col gap-y-2 items-center mb-2 lg:transition-transform lg:hover:scale-110">
                         <span class="text-white text-h5">{item.title}</span>
                         <div class="border-2 border-white/10 w-10 h-10 flex justify-center items-center">
                             <Icon name={item.icon} size={40} />
@@ -129,6 +135,104 @@ import { profile } from "@mocks/index";
         >
             Proyectos
         </span>
-        <ProjectPage client:only="react" />
+        <KCarousel
+            client:only="react"
+            loop
+            autoplay
+            slides={{
+                perView: 1,
+                spacing: 10,
+            }}
+            breakpoints={{
+                lg: {
+                    slides: {
+                        perView: 3,
+                        spacing: 10,
+                    },
+                },
+            }}
+        >
+            {
+                projectExperienceList.map((item) => (
+                    <div class="keen-slider__slide">
+                        <ProjectCard
+                            profileImage={item.profileImage}
+                            name={item.name}
+                            description={item.description}
+                            webPage={item.webPage}
+                            repository={item.repository}
+                            technologies={item.technologies}
+                        />
+                    </div>
+                ))
+            }
+        </KCarousel>
+    </SectionLayout>
+
+    <!-- Projects -->
+    <SectionLayout
+        sectionName="projects"
+        classInner="flex flex-col gap-4 py-16 mx-auto w-full"
+    >
+        <span
+            class="text-white text-h2 font-semibold mb-6 flex gap-x-1 items-center"
+        >
+            Proyectos personales
+        </span>
+        <KCarousel
+            client:only="react"
+            loop
+            autoplay
+            slides={{
+                perView: 1,
+                spacing: 10,
+            }}
+            breakpoints={{
+                lg: {
+                    slides: {
+                        perView: 3,
+                        spacing: 10,
+                    },
+                },
+            }}
+        >
+            {
+                personalProjectsList.map((item) => (
+                    <div class="keen-slider__slide">
+                        <ProjectCard
+                            profileImage={item.profileImage}
+                            name={item.name}
+                            description={item.description}
+                            webPage={item.webPage}
+                            repository={item.repository}
+                            technologies={item.technologies}
+                        />
+                    </div>
+                ))
+            }
+        </KCarousel>
+    </SectionLayout>
+
+    <SectionLayout
+        sectionName="goals"
+        classInner="flex flex-col gap-4 py-16 mx-auto w-full"
+    >
+        <span
+            class="text-white text-h2 font-semibold mb-6 flex gap-x-1 items-center"
+        >
+            Objetivos
+        </span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {
+                profile.goals.map((item) => (
+                    <GoalsCard
+                        title={item.title}
+                        logo={item.logo}
+                        description={item.description}
+                        colorBand={item.colorBand}
+                    />
+                ))
+            }
+        </div>
     </SectionLayout>
 </MainLayout>
