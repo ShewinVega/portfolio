@@ -11,7 +11,7 @@ const { class: className, classInner, sectionName }: Props = Astro.props;
 ---
 
 <section id={sectionName} class:list={cn("", className)}>
-    <div class:list={cn("mx-auto lg:max-w-3xl px-4", classInner)}>
+    <div class:list={cn("mx-auto lg:max-w-4xl px-4", classInner)}>
         <slot />
     </div>
 </section>
