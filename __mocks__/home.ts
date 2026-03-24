@@ -4,7 +4,7 @@ export const profile = {
     Mi objetivo es crear soluciones claras, útiles y escalables que impulsen el crecimiento empresarial, 
     enfocado en tecnologías web modernas como <span class="text-primary">React</span>, <span class="text-primary">Svelte</span>, 
     <span class="text-primary">.Net</span>, <span class="text-primary">Nodejs</span>
-    y con más de 3 años de experiencia en distintos proyectos.
+    y con 5 años de experiencia en distintos proyectos.
   `,
 
 
@@ -20,6 +20,10 @@ export const profile = {
     {
       title: "Svelte",
       icon: "svelte"
+    },
+    {
+      title: "Angular",
+      icon: "angular"
     },
     {
       title: ".Net",
@@ -75,9 +79,9 @@ export const profile = {
     {
       title: "Angular",
       logo: "angular",
-      description: ` Angular es una de las tecnologías que planeo incorporar a mi stack de desarrollo en el futuro. 
-        Me interesa por su enfoque estructurado para construir aplicaciones web escalables, su arquitectura basada en componentes y su sólido ecosistema para el desarrollo de aplicaciones empresariales. 
-        Aprender Angular me permitirá ampliar mi capacidad para desarrollar interfaces complejas y colaborar en proyectos de mayor escala dentro del ecosistema moderno de desarrollo web.
+      description: `
+      Angular es una tecnología con la que ya cuento con bases sólidas y experiencia inicial en su uso. Actualmente, mi objetivo es profundizar hacia un dominio avanzado, fortaleciendo conocimientos en arquitectura de aplicaciones escalables, buenas prácticas y patrones de diseño dentro de su ecosistema.
+Me interesa consolidar mi capacidad para desarrollar interfaces complejas, optimizar el rendimiento y participar activamente en proyectos de nivel empresarial, aportando soluciones robustas dentro del desarrollo frontend moderno.
       `,
       colorBand: "border-l-tango"
     },
