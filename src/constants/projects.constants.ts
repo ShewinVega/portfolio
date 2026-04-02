@@ -1,3 +1,5 @@
+import defaultProjectImage from "@assets/deault-project-image.webp";
+import controllerSeoImage from "@assets/controllerseo.webp";
 import journalAppImage from "@assets/journalApp.webp";
 import typescriptImage from "@assets/typescript.svg";
 import javascriptImage from "@assets/javascript.svg";
@@ -7,24 +9,22 @@ import tailwindImage from "@assets/tailwindcss.svg";
 import moviesAppImage from "@assets/moviesApp.jpg";
 import sequelizeImage from "@assets/sequelize.svg";
 import postgresImage from "@assets/postgresql.svg";
+import sqlServerImage from "@assets/sqlserver.svg";
 import dimelcoImage from "@assets/Dimelco.webp";
+import laravelImage from "@assets/laravel.svg";
+import vuetifyImage from "@assets/Vuetify.svg";
+import mongodbImage from "@assets/mongodb.svg";
 import githubImage from "@assets/github.svg";
 import svelteImage from "@assets/svelte.svg";
+import dotnetImage from "@assets/dotnet.svg";
 import reactImage from "@assets/react.svg";
 import viteImage from "@assets/vitejs.svg";
 import astroImage from "@assets/astro.svg";
 import nodeImage from "@assets/nodejs.svg";
 import azureImage from "@assets/azure.svg";
-import hopeImage from "@assets/hope.webp";
-import controllerSeoImage from "@assets/controllerseo.webp";
-import defaultImage from "@assets/default-User.jpg";
-import laravelImage from "@assets/laravel.svg";
-import vueImage from "@assets/vue.svg";
-import vuetifyImage from "@assets/Vuetify.svg";
-import dotnetImage from "@assets/dotnet.svg";
-import sqlServerImage from "@assets/sqlserver.svg";
 import nestjsImage from "@assets/nest.svg";
-import mongodbImage from "@assets/mongodb.svg";
+import hopeImage from "@assets/hope.webp";
+import vueImage from "@assets/vue.svg";
 
 export const projectExperienceList = [
   {
@@ -96,7 +96,7 @@ export const projectExperienceList = [
   },
   {
     name: "Control de personal",
-    profileImage: defaultImage,
+    profileImage: defaultProjectImage,
     description: `
       Backend para un sistema de control de personal, con manejo de usuarios, 
       calculo de pagos por hora trabajada, manejo de roles y permisos.
@@ -114,7 +114,7 @@ export const projectExperienceList = [
   },
   {
     name: "POS System",
-    profileImage: defaultImage,
+    profileImage: defaultProjectImage,
     description: `
       Backend para un sistema de punto de venta, con manejo de usuarios, 
       productos, ventas, inventario por lotes, eventos y notificaciones.
@@ -150,7 +150,7 @@ export const personalProjectsList = [
   },
   {
     name: "GymApp Landing Page",
-    profileImage: journalAppImage,
+    profileImage: defaultProjectImage,
     description:
       "Pagina web responsiva, hecha con svelte y tailwind",
     webPage: {
@@ -195,7 +195,7 @@ export const personalProjectsList = [
   },
   {
     name: "PosNet",
-    profileImage: defaultImage,
+    profileImage: defaultProjectImage,
     description: `
       API rest utlizando .Net 9 y arquitectura hexagonal. El objetivo de este proyecto es mostrar el manejo de 
       repositorios, inyeccion de dependencias, manejo de errores, JWT, etc ... Asi como los diferentes
@@ -213,7 +213,7 @@ export const personalProjectsList = [
   },
   {
     name: "Pokedex",
-    profileImage: defaultImage,
+    profileImage: defaultProjectImage,
     description: `
       API rest utlizando NestJS en donde veo los aspectos basicos de NestJS, manejo de errores,
       inyeccion de dependencias, decoradores, etc ...
@@ -230,7 +230,7 @@ export const personalProjectsList = [
   },
   {
     name: "Portfolio",
-    profileImage: defaultImage,
+    profileImage: defaultProjectImage,
     description:
       "Portfolio personal, hecha con astro, react, typescript y tailwind",
     webPage: {

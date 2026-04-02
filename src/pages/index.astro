@@ -73,12 +73,6 @@ import { ProjectCard } from "@src/components/pages/Projects/ProjectCard";
                     >edwinvega201196@gmail.com</span
                 >
             </Pill>
-            <!-- <Pill href="/downloads/Curriculum.pdf">
-                <Icon name="download-solid" size={20} class="text-white" />
-                <span class="text-white text-h5 opacity-80 hidden lg:block"
-                    >Descargar currículum</span
-                >
-            </Pill> -->
         </nav>
     </SectionLayout>
 
@@ -143,6 +137,11 @@ import { ProjectCard } from "@src/components/pages/Projects/ProjectCard";
                 perView: 1,
                 spacing: 10,
             }}
+            dots={{
+                class: "mt-4",
+                visible: true,
+                hideOnDesktop: true,
+            }}
             breakpoints={{
                 lg: {
                     slides: {
@@ -186,6 +185,11 @@ import { ProjectCard } from "@src/components/pages/Projects/ProjectCard";
             slides={{
                 perView: 1,
                 spacing: 10,
+            }}
+            dots={{
+                class: "mt-4",
+                visible: true,
+                hideOnDesktop: true,
             }}
             breakpoints={{
                 lg: {

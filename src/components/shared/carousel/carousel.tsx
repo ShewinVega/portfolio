@@ -1,39 +1,12 @@
 import { ArrowLeftSquareFill, ArrowRightSquareFill } from 'react-bootstrap-icons';
-import { useKeenSlider } from 'keen-slider/react';
 import { useRef, useState, type ReactNode } from 'react';
+import { useKeenSlider } from 'keen-slider/react';
 import { CONFIG } from '@constants/config';
 import { cn } from '@utils/tailwindMerge';
 import 'keen-slider/keen-slider.min.css';
 
+import type { ArrowInterface, DotsInterface, ResponsiveBreakpoints } from './interfaces';
 import { mediaQueryBreakpoints } from './helpers';
-
-// Breakpoiints configuration
-export type BreakpointKey = keyof typeof CONFIG.BREAKPOINTS;
-export interface BreakpointConfigInterface {
-	slides: {
-		perView?: number;
-		spacing?: number;
-		origin?: "center" | "auto";
-	}
-}
-export type ResponsiveBreakpoints = {
-	[key in BreakpointKey]?: BreakpointConfigInterface;
-}
-
-interface ArrowInterface {
-	custom?: boolean;
-	visible?: boolean;
-	hideOnMobile?: boolean;
-	defaultPrevArrowClass?: string;
-	defaultNextArrowClass?: string;
-}
-
-interface DotsInterface {
-	class?: string;
-	dotClass?: string;
-	visible?: boolean;
-	hideOnDesktop?: boolean;
-}
 
 interface Props {
 	children: ReactNode;
@@ -95,12 +68,15 @@ export const KCarousel = ({
 			});
 
 			if (autoplay) {
-				s.moveToIdx(5, true, animation);
+				const screenWidth = window.innerWidth;
+				if(screenWidth >= 768) {
+					s.moveToIdx(5, true, animation);
+				}
 			}
 			setLoaded(true);
 		},
 		animationEnded(s) {
-			if (autoplay && !mouseOver.current) {
+			if (autoplay && !mouseOver.current && window.innerWidth >= 768) {
 				s.moveToIdx(s.track.details.abs + 5, true, animation)
 			}
 		},
