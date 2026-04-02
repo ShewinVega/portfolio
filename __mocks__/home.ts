@@ -3,8 +3,8 @@ export const profile = {
     Desarrolador FullStack innovador con sede en Nicaragua.  
     Mi objetivo es crear soluciones claras, útiles y escalables que impulsen el crecimiento empresarial, 
     enfocado en tecnologías web modernas como <span class="text-primary">React</span>, <span class="text-primary">Svelte</span>, 
-    <span class="text-primary">.Net</span>, <span class="text-primary">Nodejs</span>
-    y con 5 años de experiencia en distintos proyectos.
+    <span class="text-primary">Nodejs</span>, <span class="text-primary">.Net</span>
+    y con mas de 4 años de experiencia en distintos proyectos.
   `,
 
 
@@ -26,12 +26,16 @@ export const profile = {
       icon: "angular"
     },
     {
-      title: ".Net",
-      icon: "dotnet"
-    },
-    {
       title: "NodeJS",
       icon: "nodejs"
+    },
+    {
+      title: "NestJS",
+      icon: "nestjs"
+    },
+    {
+      title: ".Net",
+      icon: "dotnet"
     },
     {
       title: "Sequelize",

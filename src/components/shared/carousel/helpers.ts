@@ -1,6 +1,6 @@
 import { CONFIG } from '@constants/config';
 
-import type { BreakpointConfigInterface, BreakpointKey, ResponsiveBreakpoints } from "./carousel";
+import type { BreakpointConfigInterface, BreakpointKey, ResponsiveBreakpoints } from "./interfaces";
 
 // Function to generate the responsive media query breakpoints for the carousel component
 export const mediaQueryBreakpoints = (breakpoints: ResponsiveBreakpoints | undefined) => {

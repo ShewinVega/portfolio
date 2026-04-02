@@ -1,11 +1,12 @@
-import type { RepositoryInterface, WebPageInterface } from "./interfaces";
 import {
-  FaLock,
   FaRegCheckCircle,
   FaRegClock,
-  FaLink,
   FaGithub,
+  FaLock,
+  FaLink,
 } from "react-icons/fa";
+
+import type { RepositoryInterface, WebPageInterface } from "./interfaces";
 
 export interface ProjectCardProps {
   profileImage: ImageMetadata;
@@ -30,7 +31,7 @@ export const ProjectCard = ({
         <img
           src={profileImage.src}
           alt="Provitional image"
-          className="w-full h-full rounded-lg"
+          className="w-full h-full rounded-lg object-fill"
         />
       </div>
       <div className="flex justify-between items-center px-2">
